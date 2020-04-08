@@ -137,7 +137,7 @@ endfunction
 function! vebugger#util#EnglishExecute(command) abort
     let l:lang = matchstr(execute('language messages'), '"\zs.*\ze"')
     if l:lang !~ 'en'
-        language messages en_US.utf8
+        language messages en_US.UTF-8
     endif
     let l:result = execute(a:command)
     if l:lang !~ 'en'
